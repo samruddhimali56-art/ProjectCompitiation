@@ -1,0 +1,114 @@
+.logo-icon{
+
+    font-size:28px;
+
+}
+
+
+.logo-text{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#8B4513;
+
+}
+
+
+
+
+.nav-link{
+
+    font-weight:500;
+
+    color:#333 !important;
+
+    margin:0 8px;
+
+    transition:.3s;
+
+}
+
+
+
+.nav-link:hover{
+
+    color:#D4AF37 !important;
+
+}
+
+
+
+
+
+.nav-link.active{
+
+    color:#8B4513 !important;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+.login-btn{
+
+    background:#8B4513;
+
+    color:white;
+
+    border:none;
+
+    transition:.3s;
+
+}
+
+
+
+.login-btn:hover{
+
+    background:#D4AF37;
+
+    color:#111;
+
+}
+
+
+
+
+
+.navbar{
+
+    padding:15px 0;
+
+}
+
+
+
+
+
+@media(max-width:991px){
+
+
+.nav-link{
+
+    margin:8px 0;
+
+}
+
+
+.login-btn{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+}
+
+
+}
