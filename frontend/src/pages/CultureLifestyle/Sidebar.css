@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap');
+
+
+
+.culture-sidebar{
+
+
+    position:fixed;
+
+    top:70px;
+
+    left:0;
+
+    width:280px;
+
+    height:calc(100vh - 70px);
+
+    background:#ffffff;
+
+    border-right:1px solid #eee5d8;
+
+    padding:30px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    z-index:1000;
+
+    box-shadow:
+    8px 0 25px rgba(0,0,0,.06);
+
+
+}
+
+
+
+
+
+/* =========================
+        LOGO
+========================= */
+
+
+.sidebar-logo{
+
+
+    text-align:center;
+
+    padding-bottom:25px;
+
+    border-bottom:1px solid #eee;
+
+
+}
+
+
+
+.sidebar-logo h2{
+
+
+    font-family:"Playfair Display",serif;
+
+    font-size:36px;
+
+    color:#7a3e00;
+
+    margin-bottom:5px;
+
+
+}
+
+
+
+.sidebar-logo p{
+
+
+    font-size:14px;
+
+    color:#777;
+
+    margin:0;
+
+
+}
+
+
+
+
+
+/* =========================
+        MENU
+========================= */
+
+
+.sidebar-menu{
+
+
+    margin-top:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    overflow-y:auto;
+
+    flex:1;
+
+
+}
+
+
+
+.sidebar-menu::-webkit-scrollbar{
+
+    width:5px;
+
+}
+
+
+.sidebar-menu::-webkit-scrollbar-thumb{
+
+    background:#d4af37;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+/* =========================
+        ITEM
+========================= */
+
+
+.sidebar-item{
+
+
+    border:none;
+
+    background:transparent;
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:14px 18px;
+
+    border-radius:16px;
+
+    color:#555;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+
+}
+
+
+
+.sidebar-item:hover{
+
+
+    background:#faf7f0;
+
+    color:#7a3e00;
+
+    transform:translateX(5px);
+
+
+}
+
+
+
+
+
+/* =========================
+        ICON
+========================= */
+
+
+.sidebar-icon{
+
+
+    font-size:20px;
+
+    color:#d4af37;
+
+    display:flex;
+
+    align-items:center;
+
+
+}
+
+
+
+
+
+/* =========================
+        ACTIVE
+========================= */
+
+
+.active-sidebar{
+
+
+    background:#7a3e00;
+
+    color:white;
+
+    box-shadow:
+    0 10px 25px rgba(122,62,0,.25);
+
+
+}
+
+
+
+.active-sidebar .sidebar-icon{
+
+
+    color:#ffd86b;
+
+
+}
+
+
+
+
+
+/* =========================
+        FOOTER
+========================= */
+
+
+.sidebar-footer{
+
+
+    border-top:1px solid #eee;
+
+    padding-top:20px;
+
+    text-align:center;
+
+
+}
+
+
+
+.sidebar-footer p{
+
+
+    font-size:13px;
+
+    color:#888;
+
+    line-height:1.6;
+
+    margin:0;
+
+
+}
+
+
+
+
+
+/* =========================
+        RESPONSIVE
+========================= */
+
+
+@media(max-width:992px){
+
+
+    .culture-sidebar{
+
+
+        position:relative;
+
+        top:0;
+
+        width:100%;
+
+        height:auto;
+
+        border-right:none;
+
+        border-bottom:1px solid #eee;
+
+
+    }
+
+
+    .sidebar-menu{
+
+
+        flex-direction:row;
+
+        overflow-x:auto;
+
+
+    }
+
+
+
+    .sidebar-item{
+
+
+        min-width:150px;
+
+
+    }
+
+
+
+}

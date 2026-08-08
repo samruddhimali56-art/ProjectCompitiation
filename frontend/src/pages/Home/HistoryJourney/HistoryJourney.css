@@ -1,0 +1,887 @@
+/* =====================================================
+   HISTORY JOURNEY
+===================================================== */
+
+.history-journey {
+
+  position: relative;
+
+  width: 100%;
+
+  padding: 60px 6% 120px;
+
+  background: #f9f8ef;
+
+  color: #302218;
+
+  overflow: hidden;
+
+}
+
+
+/* =====================================================
+   SUBTLE BACKGROUND
+===================================================== */
+
+.history-journey::before {
+
+  content: "HISTORY";
+
+  position: absolute;
+
+  top: 80px;
+
+  right: -100px;
+
+  font-family: Georgia, serif;
+
+  font-size: 190px;
+
+  font-weight: 700;
+
+  letter-spacing: -10px;
+
+  color: rgba(48,34,24,0.025);
+
+  transform: rotate(-90deg);
+
+  pointer-events: none;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.journey-header {
+
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 900px;
+
+  margin: 0 auto 100px;
+
+  text-align: center;
+
+}
+
+
+.journey-eyebrow {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #9a6d26;
+
+  font-size: 8px;
+
+  letter-spacing: 4px;
+
+  font-weight: 700;
+
+}
+
+
+.journey-eyebrow span {
+
+  width: 45px;
+
+  height: 1px;
+
+  background: #b28a46;
+
+}
+
+
+.journey-header h2 {
+
+  margin: 25px 0 20px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(55px, 7vw, 95px);
+
+  line-height: 0.9;
+
+  letter-spacing: -5px;
+
+  font-weight: 700;
+
+}
+
+
+.journey-header h2 em {
+
+  color: #9b6d22;
+
+  font-style: italic;
+
+  font-weight: 400;
+
+}
+
+
+.journey-header p {
+
+  max-width: 500px;
+
+  margin: 25px auto 0;
+
+  color: #81766a;
+
+  font-family: Georgia, serif;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   MAIN EXPERIENCE
+===================================================== */
+
+.journey-experience {
+
+  position: relative;
+
+  z-index: 3;
+
+  max-width: 1250px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.5fr;
+
+  gap: 65px;
+
+  align-items: center;
+
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.journey-timeline {
+
+  position: relative;
+
+}
+
+
+.timeline-heading {
+
+  display: flex;
+
+  align-items: baseline;
+
+  justify-content: space-between;
+
+  padding-bottom: 18px;
+
+  margin-bottom: 8px;
+
+  border-bottom: 1px solid rgba(48,34,24,0.15);
+
+}
+
+
+.timeline-heading span {
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  font-weight: 700;
+
+  color: #9b6d22;
+
+}
+
+
+.timeline-heading small {
+
+  font-size: 7px;
+
+  letter-spacing: 2px;
+
+  color: #aaa095;
+
+}
+
+
+/* =====================================================
+   ERA ITEM
+===================================================== */
+
+.era-list {
+
+  position: relative;
+
+}
+
+
+.era-list::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 23px;
+
+  top: 15px;
+
+  bottom: 15px;
+
+  width: 1px;
+
+  background:
+
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(155,109,34,0.35),
+      transparent
+    );
+
+}
+
+
+.era-item {
+
+  position: relative;
+
+  min-height: 85px;
+
+  padding: 17px 15px;
+
+  display: grid;
+
+  grid-template-columns: 46px 1fr 25px;
+
+  align-items: center;
+
+  cursor: pointer;
+
+  transition:
+    background 0.4s ease,
+    transform 0.4s ease;
+
+}
+
+
+.era-item:hover {
+
+  background: rgba(155,109,34,0.055);
+
+  transform: translateX(7px);
+
+}
+
+
+.era-item.active {
+
+  background: rgba(155,109,34,0.09);
+
+  transform: translateX(12px);
+
+}
+
+
+/* =====================================================
+   ERA NUMBER
+===================================================== */
+
+.era-number {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 18px;
+
+  height: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(155,109,34,0.45);
+
+  background: #f9f8ef;
+
+  color: #9b6d22;
+
+  font-size: 6px;
+
+  transition: 0.3s ease;
+
+}
+
+
+.era-item.active .era-number {
+
+  background: #9b6d22;
+
+  color: #fff;
+
+  border-color: #9b6d22;
+
+  transform: rotate(45deg);
+
+}
+
+
+.era-item.active .era-number::first-letter {
+
+  transform: rotate(-45deg);
+
+}
+
+
+/* =====================================================
+   ERA INFORMATION
+===================================================== */
+
+.era-period {
+
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #aaa095;
+
+  font-size: 7px;
+
+  letter-spacing: 1.5px;
+
+}
+
+
+.era-info h3 {
+
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  color: #49372a;
+
+  transition: 0.3s ease;
+
+}
+
+
+.era-item.active .era-info h3 {
+
+  color: #9b6d22;
+
+}
+
+
+/* =====================================================
+   ARROW
+===================================================== */
+
+.era-arrow {
+
+  color: #c3b6a7;
+
+  font-size: 18px;
+
+  opacity: 0;
+
+  transform: translateX(-8px);
+
+  transition: 0.3s ease;
+
+}
+
+
+.era-item:hover .era-arrow,
+.era-item.active .era-arrow {
+
+  opacity: 1;
+
+  transform: translateX(0);
+
+  color: #9b6d22;
+
+}
+
+
+/* =====================================================
+   DISPLAY
+===================================================== */
+
+.journey-display {
+
+  position: relative;
+
+  min-height: 590px;
+
+}
+
+
+.display-image {
+
+  position: absolute;
+
+  top: 0;
+
+  right: 0;
+
+  width: 78%;
+
+  height: 500px;
+
+  overflow: hidden;
+
+  background: #302218;
+
+}
+
+
+.display-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  animation: imageReveal 0.7s ease;
+
+}
+
+
+@keyframes imageReveal {
+
+  from {
+
+    opacity: 0;
+
+    transform: scale(1.06);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+  }
+
+}
+
+
+/* =====================================================
+   IMAGE OVERLAY
+===================================================== */
+
+.display-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+
+    linear-gradient(
+      180deg,
+      rgba(20,10,4,0.05) 20%,
+      rgba(20,10,4,0.72) 100%
+    );
+
+}
+
+
+/* =====================================================
+   IMAGE NUMBER
+===================================================== */
+
+.display-era-number {
+
+  position: absolute;
+
+  top: 25px;
+
+  right: 30px;
+
+  font-family: Georgia, serif;
+
+  font-size: 80px;
+
+  line-height: 1;
+
+  color: rgba(255,255,255,0.13);
+
+}
+
+
+/* =====================================================
+   IMAGE LABEL
+===================================================== */
+
+.display-label {
+
+  position: absolute;
+
+  top: 30px;
+
+  left: 30px;
+
+  color: rgba(255,255,255,0.8);
+
+  font-size: 7px;
+
+  letter-spacing: 3px;
+
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.display-content {
+
+  position: absolute;
+
+  z-index: 3;
+
+  left: 0;
+
+  bottom: 15px;
+
+  width: 68%;
+
+  padding: 35px;
+
+  background: rgba(249,248,239,0.96);
+
+  box-shadow: 20px 20px 0 rgba(155,109,34,0.09);
+
+}
+
+
+.display-period {
+
+  color: #9b6d22;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+}
+
+
+.display-content h3 {
+
+  margin: 12px 0 7px;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(35px, 4vw, 55px);
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  color: #302218;
+
+}
+
+
+.display-subtitle {
+
+  margin-bottom: 15px;
+
+  color: #a37b39;
+
+  font-size: 7px;
+
+  letter-spacing: 3px;
+
+  font-weight: 700;
+
+}
+
+
+.display-content p {
+
+  margin: 0;
+
+  color: #756a5e;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   FRAME
+===================================================== */
+
+.display-frame {
+
+  position: absolute;
+
+  top: -15px;
+
+  right: -15px;
+
+  width: 78%;
+
+  height: 500px;
+
+  border: 1px solid rgba(155,109,34,0.45);
+
+  pointer-events: none;
+
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.journey-bottom {
+
+  max-width: 1100px;
+
+  margin: 100px auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+}
+
+
+.journey-line {
+
+  flex: 1;
+
+  height: 1px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(155,109,34,0.35)
+    );
+
+}
+
+
+.journey-line:last-child {
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(155,109,34,0.35),
+      transparent
+    );
+
+}
+
+
+.journey-bottom-text {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+}
+
+
+.journey-bottom-text span {
+
+  color: #a99c8e;
+
+  font-family: Georgia, serif;
+
+  font-size: 10px;
+
+}
+
+
+.journey-bottom-text strong {
+
+  color: #9b6d22;
+
+  font-size: 7px;
+
+  letter-spacing: 3px;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .journey-experience {
+
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+
+  }
+
+  .journey-timeline {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    width: 100%;
+
+  }
+
+  .journey-display {
+
+    max-width: 800px;
+
+    width: 100%;
+
+    margin: auto;
+
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .history-journey {
+
+    padding: 90px 5%;
+
+  }
+
+  .journey-header {
+
+    margin-bottom: 65px;
+
+  }
+
+  .journey-header h2 {
+
+    font-size: 55px;
+
+    letter-spacing: -3px;
+
+  }
+
+  .journey-experience {
+
+    gap: 45px;
+
+  }
+
+  .era-item {
+
+    min-height: 75px;
+
+  }
+
+  .era-info h3 {
+
+    font-size: 17px;
+
+  }
+
+  .journey-display {
+
+    min-height: 480px;
+
+  }
+
+  .display-image {
+
+    width: 100%;
+
+    height: 400px;
+
+  }
+
+  .display-frame {
+
+    width: 100%;
+
+    height: 400px;
+
+  }
+
+  .display-content {
+
+    width: 90%;
+
+    padding: 25px;
+
+    bottom: 0;
+
+  }
+
+  .display-content h3 {
+
+    font-size: 34px;
+
+  }
+
+  .journey-bottom {
+
+    margin-top: 70px;
+
+  }
+
+  .journey-bottom-text {
+
+    gap: 8px;
+
+  }
+
+  .journey-bottom-text strong {
+
+    display: none;
+
+  }
+
+}

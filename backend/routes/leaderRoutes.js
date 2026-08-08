@@ -1,3 +1,5 @@
+
+
 import express from "express";
 import {
   getAllLeaders,
@@ -7,21 +9,17 @@ import {
   deleteLeader,
 } from "../controllers/leaderController.js";
 
+import protect from "../middleware/authMiddleware.js";
+
 const router = express.Router();
 
-// Get all leaders
+// Public
 router.get("/", getAllLeaders);
-
-// Get leader by ID
 router.get("/:id", getLeaderById);
 
-// Add new leader
-router.post("/", createLeader);
-
-// Update leader
-router.put("/:id", updateLeader);
-
-// Delete leader
-router.delete("/:id", deleteLeader);
+// Protected
+router.post("/", protect, createLeader);
+router.put("/:id", protect, updateLeader);
+router.delete("/:id", protect, deleteLeader);
 
 export default router;

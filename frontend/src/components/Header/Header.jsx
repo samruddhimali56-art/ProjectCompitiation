@@ -168,6 +168,19 @@ function Header() {
 
             </li>
 
+            <li className="nav-item">
+
+              <NavLink
+                to="/game"
+                className="nav-link"
+              >
+
+                Game
+
+              </NavLink>
+
+            </li>
+
 
 
 
@@ -193,14 +206,7 @@ function Header() {
 
 
 
-          <NavLink
-            to="/login"
-            className="btn login-btn rounded-pill px-4"
-          >
-
-            Login
-
-          </NavLink>
+          
 
 
 

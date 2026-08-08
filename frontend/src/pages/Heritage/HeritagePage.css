@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap");
+
+:root{
+
+    --bg:#faf7f0;
+    --white:#ffffff;
+    --primary:#7a3e00;
+    --gold:#d4af37;
+    --text:#555;
+
+}
+
+/* ======================================
+GLOBAL
+====================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+    background:var(--bg);
+
+}
+
+/* ======================================
+PAGE
+====================================== */
+
+.heritage-page{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:var(--bg);
+
+}
+
+/* ======================================
+MAIN CONTENT
+====================================== */
+
+.heritage-main{
+
+    margin-left:280px;
+
+    width:calc(100% - 280px);
+
+    padding:40px;
+
+}
+
+/* ======================================
+HERO
+====================================== */
+
+.heritage-hero{
+
+    position:relative;
+
+    height:480px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background-image:
+
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+    ),
+
+    url("https://images.unsplash.com/photo-1524492412937-b28074a5d7da");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.hero-overlay{
+
+    max-width:720px;
+
+    text-align:center;
+
+    color:white;
+
+    animation:fadeDown .8s ease;
+
+}
+
+/* ======================================
+TAG
+====================================== */
+
+.hero-tag{
+
+    display:inline-block;
+
+    background:#f7ecd0;
+
+    color:#7a3e00;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    margin-bottom:28px;
+
+}
+
+/* ======================================
+TITLE
+====================================== */
+
+.hero-overlay h1{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:58px;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+/* ======================================
+DESCRIPTION
+====================================== */
+
+.hero-overlay p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    opacity:.95;
+
+}
+
+/* ======================================
+BUTTON
+====================================== */
+
+.hero-btn{
+
+    margin-top:35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:15px 38px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.hero-btn:hover{
+
+    background:var(--gold);
+
+    transform:translateY(-4px);
+
+}
+
+/* ======================================
+CONTENT
+====================================== */
+
+.heritage-content{
+
+    margin-top:60px;
+
+}
+
+/* ======================================
+HEADER
+====================================== */
+
+.content-header{
+
+    text-align:center;
+
+    margin-bottom:55px;
+
+}
+
+.content-header span{
+
+    display:block;
+
+    color:var(--gold);
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+
+}
+
+.content-header h1{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:46px;
+
+    color:var(--primary);
+
+}
+
+.content-header p{
+
+    margin:18px auto 0;
+
+    max-width:720px;
+
+    color:var(--text);
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+.content-header::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:4px;
+
+    background:var(--gold);
+
+    margin:28px auto 0;
+
+    border-radius:30px;
+
+}
+
+/* ======================================
+GRID
+====================================== */
+
+.heritage-cards{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+/* ======================================
+ANIMATION
+====================================== */
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ======================================
+TABLET
+====================================== */
+
+@media(max-width:992px){
+
+    .heritage-main{
+
+        margin-left:0;
+
+        width:100%;
+
+        padding:25px;
+
+    }
+
+    .heritage-hero{
+
+        height:400px;
+
+    }
+
+    .hero-overlay h1{
+
+        font-size:44px;
+
+    }
+
+}
+
+/* ======================================
+MOBILE
+====================================== */
+
+@media(max-width:768px){
+
+    .heritage-main{
+
+        padding:20px;
+
+    }
+
+    .heritage-hero{
+
+        height:330px;
+
+    }
+
+    .hero-overlay h1{
+
+        font-size:34px;
+
+    }
+
+    .hero-overlay p{
+
+        font-size:16px;
+
+    }
+
+    .content-header h1{
+
+        font-size:34px;
+
+    }
+
+}
