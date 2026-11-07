@@ -1,0 +1,562 @@
+/* =====================================================
+   ABOUT ERAFLOW
+===================================================== */
+
+.about-era-section {
+
+  position: relative;
+
+  padding: 140px 7% 120px;
+
+  background: #f9f8ef;
+
+  color: #302218;
+
+  overflow: hidden;
+
+}
+
+
+/* =====================================================
+   BACKGROUND PATTERN
+===================================================== */
+
+.about-bg-pattern {
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.035;
+
+  pointer-events: none;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      #5b3518 0,
+      #5b3518 1px,
+      transparent 1px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #5b3518 0,
+      #5b3518 1px,
+      transparent 1px,
+      transparent 10px
+    );
+
+}
+
+
+/* =====================================================
+   ORNAMENT
+===================================================== */
+
+.about-ornament {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-bottom: 80px;
+
+}
+
+
+.about-ornament span {
+
+  width: 120px;
+
+  height: 1px;
+
+  background: #b78a3a;
+
+  opacity: 0.45;
+
+}
+
+
+.about-ornament div {
+
+  color: #b78a3a;
+
+  font-size: 18px;
+
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.about-container {
+
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1250px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 100px;
+
+  align-items: center;
+
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.about-image-wrapper {
+
+  position: relative;
+
+  padding: 25px;
+
+}
+
+
+.about-image-frame {
+
+  position: relative;
+
+  height: 550px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(120,75,30,0.4);
+
+}
+
+
+.about-image-frame::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 12px;
+
+  border: 1px solid rgba(212,175,55,0.5);
+
+  z-index: 2;
+
+  pointer-events: none;
+
+}
+
+
+.about-image-frame img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  filter:
+    sepia(12%)
+    contrast(1.05);
+
+  transition: transform 1s ease;
+
+}
+
+
+.about-image-wrapper:hover img {
+
+  transform: scale(1.07);
+
+}
+
+
+/* =====================================================
+   IMAGE NUMBER
+===================================================== */
+
+.image-number {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 70px;
+
+  height: 70px;
+
+  background: #3b2819;
+
+  color: #d4af37;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 18px;
+
+  letter-spacing: 2px;
+
+  z-index: 4;
+
+}
+
+
+/* =====================================================
+   IMAGE CAPTION
+===================================================== */
+
+.image-caption {
+
+  position: absolute;
+
+  bottom: 5px;
+
+  right: 0;
+
+  background: #d4af37;
+
+  color: #2c1c10;
+
+  padding: 14px 22px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  font-weight: 800;
+
+  z-index: 5;
+
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.about-content {
+
+  max-width: 650px;
+
+}
+
+
+.about-label {
+
+  color: #9b6d22;
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+
+}
+
+
+.about-content h2 {
+
+  margin: 0;
+
+  font-size: clamp(45px, 5vw, 72px);
+
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+
+}
+
+
+.about-content h2 span {
+
+  color: #9b6d22;
+
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.about-divider {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 30px 0;
+
+  color: #b78a3a;
+
+}
+
+
+.about-divider span {
+
+  width: 45px;
+
+  height: 1px;
+
+  background: #b78a3a;
+
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.about-lead {
+
+  font-family: Georgia, serif;
+
+  font-size: 21px;
+
+  line-height: 1.7;
+
+  color: #4b3524;
+
+}
+
+
+.about-content p:not(.about-lead) {
+
+  color: #70675f;
+
+  line-height: 1.9;
+
+  font-size: 15px;
+
+}
+
+
+.about-content strong {
+
+  color: #8a5a2b;
+
+}
+
+
+/* =====================================================
+   HIGHLIGHTS
+===================================================== */
+
+.about-highlights {
+
+  display: flex;
+
+  gap: 45px;
+
+  margin-top: 40px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(90,50,20,0.18);
+
+}
+
+
+.about-highlight {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+}
+
+
+.about-highlight strong {
+
+  font-size: 35px;
+
+  color: #9b6d22;
+
+}
+
+
+.about-highlight span {
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  color: #70675f;
+
+  line-height: 1.5;
+
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.about-quote {
+
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 800px;
+
+  margin: 110px auto 0;
+
+  text-align: center;
+
+}
+
+
+.quote-mark {
+
+  font-family: Georgia, serif;
+
+  font-size: 80px;
+
+  color: #d4af37;
+
+  height: 45px;
+
+}
+
+
+.about-quote p {
+
+  font-family: Georgia, serif;
+
+  font-style: italic;
+
+  font-size: 25px;
+
+  color: #4b3524;
+
+}
+
+
+.about-quote span {
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  color: #9b6d22;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:900px) {
+
+  .about-container {
+
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+
+  }
+
+
+  .about-image-wrapper {
+
+    max-width: 600px;
+
+    margin: auto;
+
+  }
+
+}
+
+
+@media(max-width:600px) {
+
+  .about-era-section {
+
+    padding: 90px 6%;
+
+  }
+
+
+  .about-ornament span {
+
+    width: 45px;
+
+  }
+
+
+  .about-image-frame {
+
+    height: 420px;
+
+  }
+
+
+  .about-content h2 {
+
+    font-size: 44px;
+
+  }
+
+
+  .about-lead {
+
+    font-size: 18px;
+
+  }
+
+
+  .about-highlights {
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+  }
+
+
+  .about-quote {
+
+    margin-top: 80px;
+
+  }
+
+
+  .about-quote p {
+
+    font-size: 20px;
+
+  }
+
+}

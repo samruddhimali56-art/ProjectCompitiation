@@ -1,0 +1,41 @@
+
+/* =========================================
+   ERAFLOW HOME PAGE
+========================================= */
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #f9f8ef;
+}
+
+/* Prevent horizontal scrolling */
+.home-page * {
+  box-sizing: border-box;
+}
+
+/* Remove unwanted spacing */
+.home-page h1,
+.home-page h2,
+.home-page h3,
+.home-page h4,
+.home-page p {
+  margin-top: 0;
+}
+
+/* Images */
+.home-page img {
+  max-width: 100%;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+.home-page ::selection {
+  background: #d4af37;
+  color: #24170f;
+}
