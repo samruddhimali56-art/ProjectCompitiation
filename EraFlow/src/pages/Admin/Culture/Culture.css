@@ -1,0 +1,403 @@
+/* ==============================
+        ADMIN PAGE
+============================== */
+
+.admin-page{
+
+    padding:40px;
+
+    background:#f8f9fc;
+
+    min-height:100vh;
+
+}
+
+
+/* ==============================
+        HEADER
+============================== */
+
+.admin-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+
+.admin-header h1{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:#222;
+
+}
+
+
+
+.add-btn{
+
+    background:#7a3e00;
+
+    color:#fff;
+
+    padding:12px 24px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+.add-btn:hover{
+
+    background:#5d2d00;
+
+    color:#fff;
+
+}
+
+
+
+/* ==============================
+        TABLE
+============================== */
+
+
+.culture-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+.culture-table thead{
+
+    background:#7a3e00;
+
+    color:#fff;
+
+}
+
+
+
+.culture-table th{
+
+    padding:18px;
+
+    text-align:left;
+
+    font-size:15px;
+
+}
+
+
+
+.culture-table td{
+
+    padding:16px;
+
+    border-bottom:1px solid #eee;
+
+    vertical-align:middle;
+
+}
+
+
+
+.culture-table tr:hover{
+
+    background:#faf7f0;
+
+}
+
+
+
+/* ==============================
+        IMAGE
+============================== */
+
+
+.table-image{
+
+    width:80px;
+
+    height:60px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+}
+
+
+
+/* ==============================
+        BUTTONS
+============================== */
+
+
+.edit-btn{
+
+    background:#d4af37;
+
+    color:#fff;
+
+    padding:8px 16px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    display:inline-block;
+
+}
+
+
+.edit-btn:hover{
+
+    background:#b9962e;
+
+    color:#fff;
+
+}
+
+
+
+.delete-btn{
+
+    background:#dc2626;
+
+    color:#fff;
+
+    padding:8px 16px;
+
+    border-radius:8px;
+
+    border:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.delete-btn:hover{
+
+    background:#b91c1c;
+
+}
+
+
+
+.action-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+
+}
+
+
+
+/* ==============================
+        FORM
+============================== */
+
+
+.culture-form{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+
+.culture-form input,
+.culture-form select,
+.culture-form textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+
+
+.culture-form input:focus,
+.culture-form select:focus,
+.culture-form textarea:focus{
+
+    border-color:#7a3e00;
+
+}
+
+
+
+.checkbox-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:600;
+
+}
+
+
+
+.checkbox-row input{
+
+    width:auto;
+
+}
+
+
+
+.save-btn{
+
+    background:#7a3e00;
+
+    color:#fff;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.save-btn:hover{
+
+    background:#5d2d00;
+
+}
+
+
+
+/* ==============================
+        RESPONSIVE
+============================== */
+
+
+@media(max-width:768px){
+
+
+.admin-page{
+
+    padding:20px;
+
+}
+
+
+
+.admin-header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    align-items:flex-start;
+
+}
+
+
+
+.culture-table{
+
+    display:block;
+
+    overflow-x:auto;
+
+}
+
+
+
+.culture-form{
+
+    padding:20px;
+
+}
+
+
+.action-buttons{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+
+}

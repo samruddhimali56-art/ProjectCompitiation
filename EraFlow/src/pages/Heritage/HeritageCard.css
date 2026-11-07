@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap");
+
+/* ===========================
+CARD
+=========================== */
+
+.heritage-card{
+
+    background:#ffffff;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.10);
+
+    transition:.35s;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.heritage-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.15);
+
+}
+
+
+/* ===========================
+IMAGE
+=========================== */
+
+.card-image{
+
+    position:relative;
+
+    height:220px;
+
+    overflow:hidden;
+
+}
+
+.card-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.heritage-card:hover .card-image img{
+
+    transform:scale(1.08);
+
+}
+
+
+/* ===========================
+BADGE
+=========================== */
+
+.image-overlay{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+}
+
+.image-overlay span{
+
+    background:#d4af37;
+
+    color:#fff;
+
+    padding:8px 16px;
+
+    border-radius:50px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+/* ===========================
+CONTENT
+=========================== */
+
+.card-content{
+
+    padding:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.card-content h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:30px;
+
+    color:#7a3e00;
+
+    margin-bottom:15px;
+
+}
+
+
+/* ===========================
+LOCATION
+=========================== */
+
+.location{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#b8860b;
+
+    font-weight:500;
+
+    margin-bottom:18px;
+
+}
+
+
+/* ===========================
+DESCRIPTION
+=========================== */
+
+.description{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+
+/* ===========================
+FACTS
+=========================== */
+
+.facts{
+
+    margin-top:25px;
+
+    background:#faf7f0;
+
+    border-left:5px solid #d4af37;
+
+    padding:18px;
+
+    border-radius:15px;
+
+}
+
+.facts h4{
+
+    font-family:"Playfair Display",serif;
+
+    color:#7a3e00;
+
+    margin-bottom:12px;
+
+}
+
+.facts ul{
+
+    padding-left:18px;
+
+}
+
+.facts li{
+
+    margin-bottom:10px;
+
+    color:#555;
+
+}
+
+
+/* ===========================
+BUTTON
+=========================== */
+
+.explore-btn{
+
+    margin-top:auto;
+
+    border:none;
+
+    background:#7a3e00;
+
+    color:white;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.explore-btn:hover{
+
+    background:#d4af37;
+
+    transform:translateY(-3px);
+
+}

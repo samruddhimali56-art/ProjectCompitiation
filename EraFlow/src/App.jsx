@@ -1,122 +1,238 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+
+import Home from "./pages/Home/Home";
+
+import Leaders from "./pages/Leaders/Leaders";
+import LeaderDetails from "./pages/Leaders/LeaderDetails";
+
+// Culture & Lifestyle
+import CultureLifestyle from "./pages/CultureLifestyle/CultureLifestyle";
+
+// Admin Pages
+import Login from "./pages/Admin/Login";
+import Dashboard from "./pages/Admin/Dashboard";
+import LeadersList from "./pages/Admin/LeadersList";
+import AddLeader from "./pages/Admin/AddLeader";
+import EditLeader from "./pages/Admin/EditLeader";
+
+import ProtectedRoute from "./routes/ProtectedRoute";
+
+// Admin Culture
+import CultureList from "./pages/Admin/Culture/CultureList";
+import AddCulture from "./pages/Admin/Culture/AddCulture";
+import EditCulture from "./pages/Admin/Culture/EditCulture";
+
+// Game
+import GuessHistoricalFigure from "./pages/Game/GuessHistoricalFigure";
+
+// Other Public Pages
+import Chatbot from "./pages/Chatbot/Chatbot";
+import HeritagePage from "./pages/Heritage/HeritagePage";
+import Battles from "./pages/Battle/Battles";
+import BattleVideoPage from "./pages/Battle/BattleVideoPage";
+import Explore from "./pages/Explore/Explore";
+
+
+/* =====================================================
+   PUBLIC LAYOUT
+===================================================== */
+
+const PublicLayout = () => {
+
+  const location = useLocation();
+
+  const isAdminPage =
+    location.pathname.startsWith("/admin");
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      {!isAdminPage && <Header />}
 
-      <div className="ticks"></div>
+      <Routes>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        {/* ================= PUBLIC ROUTES ================= */}
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+        <Route
+          path="/"
+          element={<Home />}
+        />
+
+        <Route
+          path="/leaders"
+          element={<Leaders />}
+        />
+
+        <Route
+          path="/leaders/:id"
+          element={<LeaderDetails />}
+        />
+
+        {/* Culture */}
+
+        <Route
+          path="/culture"
+          element={<CultureLifestyle />}
+        />
+
+        {/* Heritage */}
+
+        <Route
+          path="/heritage"
+          element={<HeritagePage />}
+        />
+
+        {/* Battles */}
+
+        <Route
+          path="/battles"
+          element={<Battles />}
+        />
+
+        <Route
+          path="/battles/video/:slug"
+          element={<BattleVideoPage />}
+        />
+
+        {/* Game */}
+
+        <Route
+          path="/game"
+          element={<GuessHistoricalFigure />}
+        />
+
+        {/* Chatbot */}
+
+        <Route
+          path="/chatbot"
+          element={<Chatbot />}
+        />
+
+        {/* Explore */}
+
+        <Route
+          path="/explore"
+          element={<Explore />}
+        />
+
+
+        {/* ================= ADMIN LOGIN ================= */}
+
+        <Route
+          path="/admin/login"
+          element={<Login />}
+        />
+
+
+        {/* ================= ADMIN DASHBOARD ================= */}
+
+        <Route
+          path="/admin/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+
+
+        {/* ================= ADMIN LEADERS ================= */}
+
+        <Route
+          path="/admin/leaders"
+          element={
+            <ProtectedRoute>
+              <LeadersList />
+            </ProtectedRoute>
+          }
+        />
+
+
+        {/* ================= ADD LEADER ================= */}
+
+        <Route
+          path="/admin/add-leader"
+          element={
+            <ProtectedRoute>
+              <AddLeader />
+            </ProtectedRoute>
+          }
+        />
+
+
+        {/* ================= EDIT LEADER ================= */}
+
+        <Route
+          path="/admin/edit-leader/:id"
+          element={
+            <ProtectedRoute>
+              <EditLeader />
+            </ProtectedRoute>
+          }
+        />
+
+
+        {/* ================= ADMIN CULTURE ================= */}
+
+        <Route
+          path="/admin/culture"
+          element={
+            <ProtectedRoute>
+              <CultureList />
+            </ProtectedRoute>
+          }
+        />
+
+
+        {/* ================= ADD CULTURE ================= */}
+
+        <Route
+          path="/admin/culture/add"
+          element={
+            <ProtectedRoute>
+              <AddCulture />
+            </ProtectedRoute>
+          }
+        />
+
+
+        {/* ================= EDIT CULTURE ================= */}
+
+        <Route
+          path="/admin/culture/edit/:id"
+          element={
+            <ProtectedRoute>
+              <EditCulture />
+            </ProtectedRoute>
+          }
+        />
+
+      </Routes>
+
+      {!isAdminPage && <Footer />}
+
     </>
-  )
+  );
+};
+
+
+/* =====================================================
+   APP
+===================================================== */
+
+function App() {
+
+  return (
+    <BrowserRouter>
+
+      <PublicLayout />
+
+    </BrowserRouter>
+  );
 }
 
-export default App
+
+export default App;
+
